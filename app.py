@@ -236,17 +236,10 @@ def generate_pydeck_tooltip(num_layers, primary_model, secondary_model=None):
     elif num_layers == 2:
         # In two-layer case, if observed is one model, then the predicted values come from the other.
         # Determine which predicted field to use.
-        if primary_model == "observed":
-            # Then predicted from second model.
-            tooltip += (
-                f"<b>{m2.upper()}</b> <span style='color:{{predicted_color_css_2}};'>"
-                f"{{{secondary_model.lower()}}} ({{predicted_status_2}})</span><extra></extra>"
-            )
-        else:
-            tooltip += (
-                f"<b>{m1.upper()}:</b> <span style='color:{{predicted_color_css_1}};'>"
-                f"{{{primary_model.lower()}}} ({{predicted_status_1}})</span>"
-            )
+        tooltip += (
+            f"<b>{primary_model.upper()}:</b> <span style='color:{{predicted_color_css_1}};'>"
+            f"{{{primary_model.lower()}}} ({{predicted_status_1}})</span>"
+        )
         return tooltip
     elif num_layers == 3:
         tooltip += (
