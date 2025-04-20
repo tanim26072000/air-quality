@@ -243,9 +243,9 @@ def generate_pydeck_tooltip(num_layers, primary_model, secondary_model=None):
         return tooltip
     elif num_layers == 3:
         tooltip += (
-            f"<b>{m1.upper()}:</b> <span style='color:{{predicted_color_css_1}};'>"
+            f"<b>{primary_model.upper()}:</b> <span style='color:{{predicted_color_css_1}};'>"
             f"{{{primary_model.lower()}}} ({{predicted_status_1}})</span><br>"
-            f"<b>{m2.upper()}:</b> <span style='color:{{predicted_color_css_2}};'>"
+            f"<b>{secondary_model.upper()}:</b> <span style='color:{{predicted_color_css_2}};'>"
             f"{{{secondary_model.lower()}}} ({{predicted_status_2}})</span>"
         )
         return tooltip
