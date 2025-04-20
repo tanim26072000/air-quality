@@ -20,7 +20,7 @@ A comprehensive website for visualizing PM₂.₅ concentration predictions acro
    - A specific division, or
    - A specific district.
 3. **Enter Region**: If selecting by division or district, input the name of the area.
-4. **Choose Model**: Select one of four available predictive models to visualize.
+4. **Choose Models**: Select from four available predictive models to visualize.
 5. **Generate Plot Maps**: Click to generate side-by-side maps of observed and predicted PM₂.₅ values.
 6. **View Summary and Health Concerns**: Scroll down to view a statistical summary and health risk information.
 7. **Download Data**: Click the download button to export the data for your selected spatio-temporal range.
