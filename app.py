@@ -35,6 +35,7 @@ st.markdown(
 )
 
 # ------------- User Inputs -------------
+
 col1, col2 = st.columns(2)
 with col1:
     selected_month = st.selectbox("Select a month", months, key="select_month")
@@ -73,15 +74,24 @@ elif scope == "District":
     filtered_geo_data = data[data["ADM2_EN"] == selected_district]
 
 # Model selections
+logic_help = """
+Here’s what you’ll see when you pick two models:
+
+1. **Same & Observed** → 1 map (just the Observed data).  
+2. **Same & not Observed** → 2 maps (Observed baseline + your selected model).  
+3. **Different & one is Observed** → 2 maps (Observed + your other model).  
+4. **Different & neither is Observed** → 3 maps (Observed + both chosen models).
+"""
+
 col1, col2 = st.columns(2)
 with col1:
     model1 = st.selectbox("Select first model",
                           ["Observed", "GNN+LSTM", "GNN", "CNN+LSTM", "CNN"],
-                          key="select_model")
+                          key="select_model", help= logic_help)
 with col2:
     model2 = st.selectbox("Select second model",
                           ["Observed", "GNN+LSTM", "GNN", "CNN+LSTM", "CNN"],
-                          key="select_model_2")
+                          key="select_model_2", help=logic_help)
 
 # Normalize to lowercase for column references.
 m1 = model1.lower()
