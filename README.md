@@ -48,7 +48,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 The website is publicly available for anyone to explore. You can access it at:
 
-[**air-quality-bd.streamlit.app/**](https://air-quality-bangladesh.streamlit.app/)
+[**air-quality-bangladesh.streamlit.app/**](https://air-quality-bangladesh.streamlit.app/)
 
 ---
 
